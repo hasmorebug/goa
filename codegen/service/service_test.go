@@ -26,6 +26,8 @@ func TestService(t *testing.T) {
 		{"result-collection-multiple-views", testdata.ResultCollectionMultipleViewsMethodDSL, testdata.ResultCollectionMultipleViewsMethod},
 		{"result-with-other-result", testdata.ResultWithOtherResultMethodDSL, testdata.ResultWithOtherResultMethod},
 		{"service-level-error", testdata.ServiceErrorDSL, testdata.ServiceError},
+		{"streaming-result", testdata.StreamingResultMethodDSL, testdata.StreamingResultMethod},
+		{"streaming-result-no-payload", testdata.StreamingResultNoPayloadMethodDSL, testdata.StreamingResultNoPayloadMethod},
 	}
 	for _, c := range cases {
 		t.Run(c.Name, func(t *testing.T) {

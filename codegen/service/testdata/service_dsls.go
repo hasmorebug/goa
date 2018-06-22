@@ -200,3 +200,20 @@ var ResultWithOtherResultMethodDSL = func() {
 		})
 	})
 }
+
+var StreamingResultMethodDSL = func() {
+	Service("StreamingResultService", func() {
+		Method("StreamingResultMethod", func() {
+			Payload(APayload)
+			StreamingResult(AResult)
+		})
+	})
+}
+
+var StreamingResultNoPayloadMethodDSL = func() {
+	Service("StreamingResultNoPayloadService", func() {
+		Method("StreamingResultNoPayloadMethod", func() {
+			StreamingResult(AResult)
+		})
+	})
+}
